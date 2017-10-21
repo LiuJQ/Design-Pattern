@@ -34,5 +34,5 @@
 | **行为型模式**  | 责任链模式（Chain of Responsibility Pattern）<br>命令模式（Command Pattern）<br>解释器模式（Interpreter Pattern）<br>迭代器模式（Iterator Pattern）<br>中介者模式（Mediator Pattern）<br>备忘录模式（Memento Pattern）<br>观察者模式（Observer Pattern）<br>状态模式（State Pattern）<br>空对象模式（Null Object Pattern）<br>策略模式（Strategy Pattern）<br>模板模式（Template Pattern）<br>访问者模式（Visitor Pattern）<br>  |
 
 # 常见的几个设计模式
-[单例模式](./patterns/singleton.md)
-[观察者模式](./patterns/observer.md)
+* [单例模式](./patterns/singleton.md)
+* [观察者模式](./patterns/observer.md)
