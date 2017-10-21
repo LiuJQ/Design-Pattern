@@ -1,3 +1,4 @@
+本文档主要面向想了解和学习软件设计模式的软件工程师，程序设计代码部分采用Java语言实现。
 > Author:LiuJQ<br>
 > Email:liujianqiao39870@gmail.com
 
