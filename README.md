@@ -1,4 +1,4 @@
-> Author:LiuJQ
+> Author:LiuJQ<br>
 > Email:liujianqiao39870@gmail.com
 
 # [设计模式](./design_patterns.md)
