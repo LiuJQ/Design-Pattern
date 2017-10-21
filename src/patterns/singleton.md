@@ -12,10 +12,10 @@
 &emsp;&emsp;单例模式在多线程的应用场合下必须小心使用。如果当唯一实例尚未创建时，有两个线程同时调用创建方法，那么它们同时没有检测到唯一实例的存在，从而同时各自创建了一个实例，这样就有两个实例被构造出来，从而违反了单例模式中实例唯一的原则。 解决这个问题的办法是为指示类是否已经实例化的变量提供一个互斥锁(虽然这样会降低效率)。
 
 ## 模式结构图
-![singleton_structure](../images/singleton_structure.jpg)
+![singleton_structure](../../images/singleton_structure.jpg)
 
 ## 模式时序图
-![singleton_seq](../images/singleton_seq.jpg)
+![singleton_seq](../../images/singleton_seq.jpg)
 
 ## 实现方式
 
