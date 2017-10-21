@@ -6,3 +6,31 @@
 &emsp;&emsp;一个类能返回对象一个引用(永远是同一个)和一个获得该实例的方法（必须是静态方法，通常使用getInstance这个名称）；当我们调用这个方法时，如果类持有的引用不为空就返回这个引用，如果类保持的引用为空就创建该类的实例并将实例的引用赋予该类保持的引用；同时我们还将该类的构造函数定义为私有方法，这样其他处的代码就无法通过调用该类的构造函数来实例化该类的对象，只有通过该类提供的静态方法来得到该类的唯一实例。
 ## 注意事项
 &emsp;&emsp;单例模式在多线程的应用场合下必须小心使用。如果当唯一实例尚未创建时，有两个线程同时调用创建方法，那么它们同时没有检测到唯一实例的存在，从而同时各自创建了一个实例，这样就有两个实例被构造出来，从而违反了单例模式中实例唯一的原则。 解决这个问题的办法是为指示类是否已经实例化的变量提供一个互斥锁(虽然这样会降低效率)。
+## 实现方式
+### 懒汉式，线程不安全
+&emsp;&emsp;教科书上实现的单例模式。
+```java
+public class Singleton {
+    private static Singleton instance;
+    private Singleton (){}
+    public static Singleton getInstance() {
+     if (instance == null) {
+         instance = new Singleton();
+     }
+     return instance;
+    }
+}
+```
+&emsp;&emsp;这段代码简单明了，而且使用了懒加载模式，但是却存在致命的问题。当有多个线程并行调用 getInstance() 的时候，就会创建多个实例。也就是说在多线程下不能正常工作。
+### 懒汉式，线程安全
+&emsp;&emsp;为了解决上面的问题，最简单的方法是将整个 getInstance() 方法设为同步（synchronized）。
+```java
+public static synchronized Singleton getInstance() {
+    if (instance == null) {
+        instance = new Singleton();
+    }
+    return instance;
+}
+```
+&emsp;&emsp;虽然做到了线程安全，并且解决了多实例的问题，但是它并不高效。因为在任何时候只能有一个线程调用 getInstance() 方法。但是同步操作只需要在第一次调用时才被需要，即第一次创建单例实例对象时。这就引出了双重检验锁。
+### 
