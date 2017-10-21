@@ -17,7 +17,7 @@
 设计模式总共有 23 种设计，这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。
 
 | **分类**  | **模式** |
-| -------------------------- | --------------------------------------- |
+| -------------------------- | ----------- |
 | **创建型模式**  | 工厂模式(Factory Pattern)<br> 抽象工厂模式(Abstract Factory Pattern)<br> 单例模式(Singleton Pattern)<br> 建造者模式(Builder Pattern)<br> 原型模式(Prototype Pattern)  |
 | **结构型模式**  | Content Cell  |
 | **行为型模式**  | Content Cell  |
