@@ -22,7 +22,7 @@ public class Singleton {
 }
 ```
 &emsp;&emsp;这段代码简单明了，而且使用了懒加载模式，但是却存在致命的问题。当有多个线程并行调用 getInstance() 的时候，就会创建多个实例。也就是说在多线程下不能正常工作。
-
+****
 
 ### 懒汉式，线程安全
 &emsp;&emsp;为了解决上面的问题，最简单的方法是将整个 getInstance() 方法设为同步（synchronized）。
@@ -35,4 +35,6 @@ public static synchronized Singleton getInstance() {
 }
 ```
 &emsp;&emsp;虽然做到了线程安全，并且解决了多实例的问题，但是它并不高效。因为在任何时候只能有一个线程调用 getInstance() 方法。但是同步操作只需要在第一次调用时才被需要，即第一次创建单例实例对象时。这就引出了双重检验锁。
-### 
+****
+
+### 双重检验锁
