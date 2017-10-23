@@ -30,9 +30,11 @@
 * ConcreteSubject: 具体目标
 * Observer: 观察者
 * ConcreteObserver: 具体观察者
+
 ![observer_structure](../../images/observer_structure.jpg)
 
 ## 时序图
+
 ![observer_seq](../../images/obsever_seq.jpg)
 
 ## 应用场景
