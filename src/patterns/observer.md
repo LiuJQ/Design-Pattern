@@ -30,9 +30,10 @@
 * ConcreteSubject: 具体目标
 * Observer: 观察者
 * ConcreteObserver: 具体观察者
+![observer_structure](../../images/observer_structure.jpg)
 
 ## 时序图
-
+![observer_seq](../../images/obsever_seq.jpg)
 
 ## 应用场景
 &emsp;&emsp;观察者模式在软件开发中应用非常广泛，如某电子商务网站可以在执行发送操作后给用户多个发送商品打折信息，某团队战斗游戏中某队友牺牲将给所有成员提示等等，凡是涉及到一对一或者一对多的对象交互场景都可以使用观察者模式。
