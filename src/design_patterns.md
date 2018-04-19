@@ -39,4 +39,4 @@
 * [单例模式](./patterns/singleton.md)
 * [观察者模式](./patterns/observer.md)
 * [工厂模式](./patterns/factory.md)
-* [建造者模式](./patterns/builder.md)
+* [建造者模式](https://liujq.github.io/2017/11/13/design-patterns-builder.html)
